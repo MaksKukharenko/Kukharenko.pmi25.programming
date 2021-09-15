@@ -1,0 +1,31 @@
+i = 0
+while i<1:
+  n = input('Insert n ')
+  try:
+     int(n)
+  except ValueError:
+     print('Wrong element type.')
+  else:
+     n = int(n)
+     i+=1
+element = int(0)
+x = []
+y = []
+i = 0
+print("Insert ", 2 * n, " elements ")
+while i < int(2) * int(n):
+    element = input('Insert new element ')
+    try:
+        int(element)
+    except ValueError:
+        print('Wrong element type.')
+    else:
+        x.append(int(element))
+        i += 1
+for i in range(n):
+    y.append(int(x[i])+int(x[2 * n - 1-i]))
+max = y[0]
+for i in range(n):
+    if (max<y[i]):
+        max = y[i]
+print("Maximum value is ", max)
